@@ -95,7 +95,7 @@ Data Types: age/weight → float64, insurance_provider → category
 ```
 
 ---
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 
 Identify & handle missing values ❌➡️✅
 
@@ -107,8 +107,10 @@ Create verification report to confirm data cleaning 📝
 
 Prepare a dataset for real-world healthcare analysis 🏥
 
-👤 Author
+## 👤 Author
 
 Keshav Kaushik
+
 B.Sc Computer Science Student
+
 Government Holkar Science College, Indore
