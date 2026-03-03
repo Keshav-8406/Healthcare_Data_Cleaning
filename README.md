@@ -1,121 +1,100 @@
-🏥 Healthcare Data Cleaning Project
+# 🏥 Healthcare Data Cleaning Project
 
-📋 Project Overview
+## 📋 Project Overview
+This project demonstrates a complete workflow of **data cleaning** for a healthcare clinic dataset.  
+As a data analyst, the task is to identify and fix **missing values, duplicate records, and incorrect data types** before analysis.
 
-This project demonstrates a complete workflow of data cleaning for a healthcare clinic dataset.
-As a data analyst, the task is to identify and fix missing values, duplicate records, and incorrect data types before analysis.
+Implemented in **Python** using **pandas** and **NumPy**.
 
-Implemented in Python using pandas and NumPy.
+---
 
-🗂 Dataset
+## 🗂 Dataset
+The dataset contains information about **patients**, including:
 
-The dataset contains information about patients, including:
+| Column | Description |
+|--------|-------------|
+| `patient_id` | Unique identifier for each patient 🔑 |
+| `age` | Patient age (some missing or incorrect values) 🎂 |
+| `weight` | Patient weight in kg (some missing or incorrect values) ⚖️ |
+| `blood_pressure` | Blood pressure measurement (some missing values) 💓 |
+| `medication` | Medication prescribed (some missing values) 💊 |
+| `insurance_provider` | Insurance provider (some missing values, categorical) 🏦 |
 
-Column	Description
-patient_id	Unique identifier for each patient 🔑
-age	Patient age (some missing or incorrect values) 🎂
-weight	Patient weight in kg (some missing or incorrect values) ⚖️
-blood_pressure	Blood pressure measurement (some missing values) 💓
-medication	Medication prescribed (some missing values) 💊
-insurance_provider	Insurance provider (some missing values, categorical) 🏦
+**Total rows:** 20 (includes intentional missing values, duplicates, and wrong types).
 
-Total rows: 20 (includes intentional missing values, duplicates, and wrong types).
+---
 
-🛠 Project Tasks
-1️⃣ Inspect the Data
+## 🛠 Project Tasks
 
-Check dataset shape 📐
+### 1️⃣ Inspect the Data
+- Check **dataset shape** 📐  
+- Identify **missing values** ❌  
+- Calculate **percentage of missing values** 📊  
+- Detect **duplicate rows** 🔍  
+- Check **column data types** 🔢  
 
-Identify missing values ❌
+### 2️⃣ Data Type Conversion
+- Convert `age` and `weight` → **numeric** type ✨  
+- Convert `insurance_provider` → **categorical** type 🗂  
+- Verify **data type conversions** ✅  
 
-Calculate percentage of missing values 📊
+### 3️⃣ Handle Missing Values
+- Fill missing values:  
+  - `age`, `weight`, `blood_pressure` → **median** 🧮  
+  - `medication` → **mode** 🎯  
+  - `insurance_provider` → **'Unknown'** ❓  
+- Ensure **no missing values remain** ✅  
 
-Detect duplicate rows 🔍
+### 4️⃣ Handle Duplicates
+- Identify duplicate rows 🔍  
+- Remove duplicates based on `patient_id`  
+- Keep only the **first occurrence** ✅  
 
-Check column data types 🔢
+### 5️⃣ Verification Report
+- Print **before and after report**:  
+  - Shape of dataset 📐  
+  - Missing values count ❌  
+  - Duplicate count 🔁  
+  - Data types 🔢  
+- Confirm dataset is **clean and ready for analysis** 🎯  
 
-2️⃣ Data Type Conversion
+---
 
-Convert age and weight → numeric type ✨
+## ⚙️ Tools and Libraries
+- **Python 3.x** 🐍  
+- **pandas** → Data manipulation and cleaning 📊  
+- **NumPy** → Handling numerical operations 🔢  
 
-Convert insurance_provider → categorical type 🗂
+---
 
-Verify data type conversions ✅
+## 🚀 Project Workflow
+1. Create the original dataset from a dictionary 📝  
+2. Inspect dataset for missing values, duplicates, and incorrect types 🔍  
+3. Copy dataset to a new DataFrame for cleaning 📂  
+4. Convert column types & handle missing values safely 🧹  
+5. Remove duplicates based on `patient_id` ❌🔁  
+6. Verify all cleaning steps with a **final report** 📈  
 
-3️⃣ Handle Missing Values
+---
 
-Fill missing values:
+## 🎯 Expected Outcome
+After cleaning:  
+- **Shape:** 20 → 18 rows (duplicates removed)  
+- **All missing values filled** ✅  
+- **Correct data types** for all columns 🔢  
+- Dataset ready for further analysis 🏥  
 
-age, weight, blood_pressure → median 🧮
+**Final Verification Report Example:**
 
-medication → mode 🎯
-
-insurance_provider → 'Unknown' ❓
-
-Ensure no missing values remain ✅
-
-4️⃣ Handle Duplicates
-
-Identify duplicate rows 🔍
-
-Remove duplicates based on patient_id
-
-Keep only the first occurrence ✅
-
-5️⃣ Verification Report
-
-Print before and after report:
-
-Shape of dataset 📐
-
-Missing values count ❌
-
-Duplicate count 🔁
-
-Data types 🔢
-
-Confirm dataset is clean and ready for analysis 🎯
-
-⚙️ Tools and Libraries
-
-Python 3.x 🐍
-
-pandas → Data manipulation and cleaning 📊
-
-NumPy → Handling numerical operations 🔢
-
-🚀 Project Workflow
-
-Create the original dataset from a dictionary 📝
-
-Inspect dataset for missing values, duplicates, and incorrect types 🔍
-
-Copy dataset to a new DataFrame for cleaning 📂
-
-Convert column types & handle missing values safely 🧹
-
-Remove duplicates based on patient_id ❌🔁
-
-Verify all cleaning steps with a final report 📈
-
-🎯 Expected Outcome
-
-After cleaning:
-
-Shape: 20 → 18 rows (duplicates removed)
-
-All missing values filled ✅
-
-Correct data types for all columns 🔢
-
-Dataset ready for further analysis 🏥
-
-Final Verification Report Example:
-
+```text
 Shape: (18, 6)
 Missing Values: 0 for all columns
 Duplicate patient_id: 0
 Data Types: age/weight → float64, insurance_provider → category
+
+```
+
+---
 🎓 Learning Outcomes
 
 Identify & handle missing values ❌➡️✅
@@ -127,3 +106,9 @@ Convert columns to correct data types 🔢
 Create verification report to confirm data cleaning 📝
 
 Prepare a dataset for real-world healthcare analysis 🏥
+
+👤 Author
+
+Keshav Kaushik
+B.Sc Computer Science Student
+Government Holkar Science College, Indore
